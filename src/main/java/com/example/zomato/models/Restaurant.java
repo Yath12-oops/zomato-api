@@ -21,6 +21,7 @@ public class Restaurant {
 
     private String location;
 
+    @Enumerated(EnumType.STRING)
     private RestaurantType restaurantType;
 
     private long contactNo;
