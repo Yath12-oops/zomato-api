@@ -25,6 +25,7 @@ public class FoodItem {
 
     private boolean veg;
 
+    @Enumerated(EnumType.STRING)
     private FoodCategory foodCategory;
 
     @ManyToOne

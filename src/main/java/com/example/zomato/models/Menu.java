@@ -3,6 +3,7 @@ package com.example.zomato.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.engine.internal.Cascade;
 
 import java.util.List;
 
@@ -23,6 +24,6 @@ public class Menu {
     @JsonIgnore
     private Restaurant restaurant;
 
-    @OneToMany(mappedBy = "menu")
+    @OneToMany(mappedBy = "menu", cascade=CascadeType.ALL)
     private List<FoodItem> foodItems;
 }
