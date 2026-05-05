@@ -1,6 +1,8 @@
 package com.example.zomato.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import lombok.*;
 
 import java.util.List;
@@ -23,6 +25,8 @@ public class DeliveryPartner {
 
     private String vehicleNo;
 
+    @Min(1)
+    @Max(5)
     private double rating;
 
     @OneToMany(mappedBy = "deliveryPartner")
